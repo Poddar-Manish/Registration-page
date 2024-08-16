@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+
+    <title>register!</title>
+
+    <style>
+        
+        .img-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            text-align: center;
+        }
+
+        .img-container img {
+            width: 400px; /* Set the width to your desired size */
+            height: auto; /* Maintains the image's aspect ratio */
+        }
+        
+        .text{
+            text-align: center;
+            font-size: 30px;
+        }
+        
+    </style>
+    
+</head>
+<body>
+
+    <div class="img-container">
+        <img src="" th:src="@{image/thankyou.jpg}" alt="Thank You">
+        <p class="text">
+            For Registration!!
+        </p>
+    </div>
+
+
+
+</body>
+</html>
