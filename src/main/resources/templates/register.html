@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en" xmlns="https://www.thymeleaf.org/">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>register!</title>
+    <style>html {
+        height: 100%;
+        width: 100%;
+    }
+    
+    body {
+        background: url("https://images.unsplash.com/photo-1485802007047-7774de7208e5?dpr=1&auto=compress,ormat&fit=crop&w=1800&h") no-repeat center center fixed;
+        background-size: cover;
+        font-family: 'Droid Serif', serif;
+    }
+   
+    
+    #container {
+        background: rgba(8, 4, 1, 0.744);
+        width: 20.75rem;
+        height: 25rem;
+        margin: auto;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+    }
+    
+    header {
+        text-align: center;
+        vertical-align: middle;
+        line-height: 3rem;
+        height: 3rem;
+        background: rgba(74, 60, 44, 0.7);
+        font-size: 1.4rem;
+        color: #9b9a4c;
+            font-style:unset;
+    }
+    
+    fieldset {
+        border: 0;
+        text-align: center;
+    }
+    
+    input[type="submit"] {
+        background: rgb(198, 129, 137);
+        border: 0;
+        display: block;
+        width: 50%;
+        margin: 0 auto;
+        color: rgb(244, 237, 237);
+        padding: 0.7rem;
+        cursor: pointer;
+    }
+    
+    input {
+        background: transparent;
+        border: 0;
+        border-left: 4px solid;
+        border-color: #f0e5e5;
+        padding: 10px;
+        color: rgb(197, 135, 135);
+    }
+    
+    input[type="text"]:focus,
+    input[type="email"]:focus,
+    input[type="password"]:focus {
+        outline: 0;
+        background: dvrgba(245, 242, 242, 0.3);
+        border-radius: 1.2rem;
+        border-color: transparent;
+    }
+    .form-label{
+        color: rgb(139, 201, 180);
+    }
+    .form-check-label{
+        color: rgb(166, 138, 102);
+    }
+    
+    ::placeholder {
+        color: #669186;
+    }
+    
+    
+    
+    @media all and (min-width: 481px) and (max-width: 568px) {
+        #container {
+            margin-top: 10%;
+            margin-bottom: 10%;
+        }
+    }
+        @media all and (min-width: 569px) and (max-width: 768px) {
+            #container {
+                margin-top: 5%;
+                margin-bottom: 5%;
+            }
+        }</style>
+    </head>
+    <body>
+       
+    </body>
+    </html><body>
+        <div id="container">
+           <header>Register new account</header>
+           <form th:action="@{/registerUser}" th:object="${emp}" method="post">
+              <fieldset>
+                 <br/>
+                 <input type="text" th:field="*{name}"  class="form-control"  id="exampleFormControlInput1" placeholder="Name">
+                 <br/><br/>
+                 <input type="text" th:field="*{Username}" name="username" id="username" placeholder="Username" required autofocus>
+                 <br/><br/>
+                 <input type="email" th:field="*{email}" name="email" id="email" placeholder="E-mail" required>
+                 <br/><br/>
+                 <input type="text" th:field="*{phone}" class="form-control" id="exampleFormControlInput4" placeholder="Phone Number">
+                 <br/><br/>
+                 <label for="exampleFormControlInput4" class="form-label">Gender</label>
+    
+                 <input class="form-check-input" type="radio" name="gender" id="inlineRadio1" value="male">
+                <label class="form-check-label" for="inlineRadio1">Male</label>
+        
+                <input class="form-c heck-input" type="radio" name="gender" id="inlineRadio2" value="female">
+                <label class="form-check-label" for="inlineRadio2">Female</label>
+                 <br/> <br/> <br/>
+                 <label for="submit"></label>
+                 <input type="submit" name="submit" id="submit" value="REGISTER">
+              </fieldset>
+           </form>
+        </div>
+     </body>
+     </html>
